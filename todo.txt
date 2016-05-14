@@ -1,0 +1,8 @@
+menu structure
+submenu structure
+article storage in db
+cli interface
+    - searching doc
+    - importing doc 
+    - exporting doc
+    - pushing doc to wiki
