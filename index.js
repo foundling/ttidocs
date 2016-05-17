@@ -1,9 +1,10 @@
-var blessed = require('blessed')
-    , fs = require('fs')
-    , menuData = require('./lib/menu_data')
-    , screen = blessed.screen({ smartCSR: true })
-    , initialMenuItems = Object.keys(menuData['Trade Tech Documentation'])
-    , path = ['Trade Tech Documentation'];
+var blessed = require('blessed');
+var fs = require('fs');
+var sqlite3 = require('sqlite3');
+var menuData = require('./lib/menu_data');
+var screen = blessed.screen({ smartCSR: true });
+var initialMenuItems = Object.keys(menuData['Trade Tech Documentation']);
+var path = ['Trade Tech Documentation'];
 
 screen.title = 'Trade Tech Documentation';
 screen.cursor.color = 'yellow';
@@ -87,6 +88,9 @@ menuList.on('select', function(el, selected) {
 
 });
 
+var title = blessed.bigtext({
+    content: 'abc',
+});
 
 frame.append(menuList);
 screen.append(frame);
